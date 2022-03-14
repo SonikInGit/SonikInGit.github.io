@@ -1,18 +1,10 @@
 <?php
 
-$errors = [];
-$data = [];
-
-
-if (empty($_POST['email'])) {
-    $errors['email'] = 'Email is required.';
-}
-if (!empty($errors)) {
-    $data['success'] = false;
-    $data['errors'] = $errors;
-} else {
-    $data['success'] = true;
-    $data['message'] = 'Success!';
+if (isset($_POST["email"])){
+    $result = array(
+    	'email' => $_POST["email"],
+    ); 
+    echo json_encode($result); 
 }
 
-echo json_encode($data);
+?>
