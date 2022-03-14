@@ -1,18 +1,16 @@
 $(document).ready(function () {
-    $("#email-form").submit(function (event) {
-      var formData = {
-        email: $("#femail").val(),
-      };
-  
+    $("email-form").submit(function (event) {
       $.ajax({
         type: "POST",
         url: "action_ajax_form.php",
-        data: formData,
-        dataType: "json",
-        encode: true,
-      }).done(function (data) {
-        console.log(data);
-      });
-      event.preventDefault();
+        dataType: "html",
+        success: function(response) { //Данные отправлены успешно
+          result = $.parseJSON(response);
+          console.log("Email: " + result.email);
+      },
+      error: function(response) { // Данные не отправлены
+        console.log("Ошибка. Данные не отправлены.");
+      }
     });
   });
+});
