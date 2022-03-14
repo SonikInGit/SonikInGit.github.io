@@ -1,10 +1,18 @@
 <?php
 
-if (isset($_POST["email"])) { 
-    
-	// Формируем массив для JSON ответа
-    $result = $_POST['email']; 
+$errors = [];
+$data = [];
 
-    echo json_encode($result); 
+
+if (empty($_POST['email'])) {
+    $errors['email'] = 'Email is required.';
 }
-?>
+if (!empty($errors)) {
+    $data['success'] = false;
+    $data['errors'] = $errors;
+} else {
+    $data['success'] = true;
+    $data['message'] = 'Success!';
+}
+
+echo json_encode($data);
