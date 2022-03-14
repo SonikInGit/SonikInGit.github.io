@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EA Test Front-end</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&family=Roboto&display=swap" rel="stylesheet">
+<link href="../test task/src/style/style.css"  rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="../test task/script.js"></script>
+<script src="../test task/src/js/ajax.js"></script>
+</head>
+<body>
+  <div id="success_subscribe" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="$('#success_subscribe').hide()"></span><br>
+      <span id="success">Success!</span>
+      <p>You have successfully subscribed to the email newsletter</p>
+      <button id ="close_modal" type="submit"  onclick="$('#success_subscribe').hide()">Close </button>
+    </div>
+  
+  </div>
+    <div class="background">
+        <img id="figure1" src="../test task/src/img/Vector.svg" alt="blue figure">
+        <img id="figure2" src="../test task/src/img/Vector2.svg" alt="blue figure"> 
+    </div> 
+    <section>
+            <p><a href="index.html"><img id="logo" src="../test task/src/img/Logo.svg" alt="logo"></a></p>
+        <div class="main-text">
+            <h1>Under Construction</h1>
+            <p>We're making lots of improvements and will be back soon</p>
+        </div>
+        <div class="timer">
+            <div class="timer_items">
+              <div class="timer_item timer_days">00</div>
+              <div class="timer_item timer_hours">00</div>
+              <div class="timer_item timer_minutes">00</div>
+              <div class="timer_item timer_seconds">00</div>
+              </div>
+              <div class="labels">
+                <div class="label">
+                  <span id="days">Days</span>
+                <img class="back" src="../test task/src/img/red_back.svg" alt="red_figure">
+                </div>
+                <div class="label">
+                  <span id="hours">Hours</span>
+                <img class="back" src="../test task/src/img/red_back.svg" alt="red_figure">
+                </div> 
+                <div class="label">
+                  <span id="minutes">Minutes</span>
+                <img class="back" src="../test task/src/img/red_back.svg" alt="red_figure">
+                </div>
+                <div class="label">
+                  <span id="seconds">Seconds</span>
+                <img class="back" src="../test task/src/img/red_back.svg" alt="red_figure">
+                </div>
+            </div>
+            </div>
+          </div>
+          <div class="go_to_event">
+              <label for="event">Check our event page when you wait:</label><br>
+            <buttton id ="event_button" type="submit" onclick="location.href='https://egorovagency.by/#main'">
+                <span id="go_to_event-label">Go to the event</span>
+                <span id="event_button-icon"><img src="../test task/src/img/white_arrow.svg" alt="white arrow"></span>
+            </buttton>
+          </div>
+    </section>
+   <footer>
+        <form id="email-form">
+            <input type="email" id="femail" name="femail" placeholder="Enter your Email and get notified"><br>
+            <button  onClick="reply_click(this.id)" type="submit" id="button_email"><img src="../test task/src/img/white_arrow.svg" alt="white_arrow"></button>
+          </form>
+    </footer>
+</body>
+</html>
