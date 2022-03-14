@@ -1,6 +1,5 @@
 *, *::after, *::before{
    margin: 0;
-   transition: .5s ease-in-out;
 }
 body{
     width: 100%;
@@ -82,10 +81,7 @@ section{
     color: #162C4E;
     margin-left: 20px;
 }
-.timer_items .timer_item:last-child{
-    text-align: center;
-    margin-left: 0px;
-}
+
 .timer_item:not(:last-child)::after {
     content: ':';
     margin-left: 25px;
@@ -463,14 +459,28 @@ footer{
         margin-top: 40px;
     }
     .timer_items{
-        height: 82px;
+        width: 100%;
+        height: 36px;
     }
     .timer_item{
         width: 64px;
-        height: 82px;
+        height: 36px;
         text-align: center;
-        margin-left: 34px;
         font-size: 36px;
+    }
+    .timer_item:not(:last-child)::after{
+        margin-left: 5px;
+    }
+    .timer_item:not(:last-child,:first-child)::after {
+        margin-left: 10px;
+    }
+    .timer_items .timer_item:last-child{
+        margin-left: 2px;
+    }
+    .labels{
+        width: 43%;
+        margin-right: auto;
+        margin-left: auto;
     }
     .label{
         width: 64px;
@@ -491,8 +501,6 @@ footer{
     #event_button{
         padding: 16px 24px 17px;
         margin-top: 15px;
-        position: absolute;
-        left: 264px;
     }
     #event_button-icon{
         width: 20px;
@@ -500,24 +508,23 @@ footer{
         margin-left: 32px;
     }
     footer{
-        width: 100%;
         height: 160px;
     }
     #email-form{
-        width: 100%;
-        padding-top: 0px;
+        margin-left: auto;
+        margin-right: auto;
     }
     #femail{
         width: 360px;
-        height: 41px;
         padding-left: 20px;
-        font-size: 14px;
+        left:0;
+        top: 0;
+        position: relative;
     }
     
     #email-form button{
-        width: 33px;
-        height: 33px;
-        padding-top: 4px;
+        position: absolute;
+        margin-left: 335px;
     }
 }
 @media only screen and (min-width:1440px) and (orientation: portrait){
