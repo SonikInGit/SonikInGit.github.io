@@ -2,7 +2,6 @@ $( document ).ready(function() {
     $("#button_email").click(
 		function(){
 			sendAjaxForm('ajax_form', 'action_ajax_form.php');
-			return false; 
 		}
 	);
 });
