@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    $("email-form").submit(function (event) {
+    $("#email-form").submit(function (event) {
       var formData = {
         email: $("#femail").val(),
       };
