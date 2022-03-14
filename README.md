@@ -1,1 +1,1 @@
-# SonukInGit.github.io
+# SonikInGit.github.io
