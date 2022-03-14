@@ -1,0 +1,693 @@
+*, *::after, *::before{
+   margin: 0;
+   transition: .5s ease-in-out;
+}
+body{
+    width: 100%;
+    margin:0;
+    font-family: 'Poppins';
+    font-size: 18px;
+    font-weight: 400;
+}
+.background{
+    width:100%;
+    height:758px;
+    display:flex;
+    justify-content: space-between;
+    position: absolute;
+}
+#figure1{
+    width: 470px;
+    height: 419px;
+}
+#figure2{
+    width: 271px;
+    height: 327px;    
+}
+section{
+    width: 100%;
+    height:758px;
+    position: relative;
+}
+#logo{
+    width: 190px;
+    height: 60px;
+    padding-top: 60px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+.main-text{
+    width: 838px;
+    height: 137px;
+    text-align: center;
+    margin-top: 93px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.main-text h1{
+    width: 838px;
+    height: 75px;
+    font-size: 72px;
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: 104%;
+    color: rgba(22, 44, 78, 0.39);
+    margin-bottom: 8px;
+}
+.main-text p{
+    line-height: 150%;
+    width: 423px;
+    height: 54px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.timer{
+    margin-top: 32px;
+}
+.timer_items{
+    height: 61px;
+    display: flex;
+    justify-content: center;
+}
+.timer_item{
+    width: 173px;
+    height: 72px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 72px;
+    line-height: 100%;
+    color: #162C4E;
+    margin-left: 20px;
+}
+.timer_items .timer_item:last-child{
+    text-align: center;
+    margin-left: 0px;
+}
+.timer_item:not(:last-child)::after {
+    content: ':';
+    margin-left: 25px;
+}
+.labels{
+    width: 710px;
+    display: flex;
+    justify-content: space-between;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+}
+.label{
+    width: 132px;
+    height: 54px;
+} 
+.label span{
+    width: 132px;
+    text-align: center;
+    position: absolute;
+    z-index: 1;
+    font-size: 16px;
+    line-height: 100%;
+    padding-top: 20px;
+    font-weight: 400;
+    color: #FFFFFF;
+
+}
+.label img{
+    position: relative;
+    z-index: 0;
+}
+
+
+.go_to_event{
+    text-align: center;
+    height: 99px;
+    margin-top: 72px;
+}
+#event_button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 192px;
+    height: 27px;
+    background-color: #1D4169;
+    color: #FFFFFF;
+    border-radius: 40px;
+    padding: 16px 20px 17px 28px;
+    margin-top: 12px;
+    margin-left: auto;
+    margin-right: auto;
+}
+#event_button-icon{
+    width: 20px;
+    height: 20px;
+    margin-left: 30px;
+}
+footer{
+    width: 100%;
+    height: 192px;
+    background-color: rgba(22, 44, 78, 1);
+    
+}
+#email-form{
+    width: 100%;
+    padding-top: 61px;
+    display: flex;
+    justify-content: center;
+
+}
+#femail{
+    width: 440px;
+    height: 59px;
+    z-index: 0;
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    box-sizing: border-box;
+    box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.4);
+    border-radius: 40px;
+    padding-left: 27px;
+    color: rgba(0, 0, 0, 0.6);
+    font-family: 'Poppins';
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 150%;
+    margin-left: auto;
+    margin-right: auto;
+    position: absolute;
+}
+
+#email-form button{
+    width: 43px;
+    height: 43px;
+    background: #DF2224;
+    border: .5px solid #DF2224;
+    border-radius: 60%;
+    padding-top: 4px;
+    z-index: 1;
+    position: relative;
+    margin-left: 380px;
+    margin-top: 8px;
+}
+#success_subscribe{
+    display: none;
+}
+.modal{
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%; /* Полная ширина */
+    height: 100%; /* Полная высота */
+    background-color: rgba(22, 44, 78, 0.6); 
+    display: flex;
+            
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+            
+}
+.modal-content{
+    width: 320px;
+    height: 370px;
+    background: #FFFFFF;
+    border: 1px solid rgba(19, 89, 120, 0.07);
+    box-sizing: border-box;
+    border-radius: 2px;
+    text-align: center;
+    display: inline-block;
+    vertical-align: middle;
+}
+#success{
+    display: inline-block;
+    margin-top: 66px;
+    text-transform: uppercase;
+    font-size: 36px;
+    font-weight: 700;
+    color: rgba(22, 44, 78, 1);
+
+}
+.modal-content p{
+    font-size:  16px;
+    width: 280px;
+    height: 48px;
+    text-align: center;
+    margin: 30px auto;
+}
+#close_modal{
+    background-color: #1D4169;
+    border: .5px solid #1D4169;
+    border-radius: 40px;
+    color:white;
+    font-family: 'Poppins';
+    font-weight: 400;
+    padding:16px 73px 16.68px 74px;
+}
+.close {
+    display: inline-block;
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    opacity: 0.3;
+    margin-top: 15px;
+    margin-left: 115px;
+  }
+  .close:hover {
+    opacity: 1;
+  }
+  .close:before, .close:after {
+    position: absolute;
+    left: 15px;
+    content: ' ';
+    height: 33px;
+    width: 2px;
+    background-color: #333;
+  }
+  .close:before {
+    transform: rotate(45deg);
+  }
+  .close:after {
+    transform: rotate(-45deg);
+  }
+
+@media only screen and (min-width: 360px) and (max-width: 375px) , (orientation: portrait){
+    body{
+        width: 100%;
+    }
+    .background{
+        width: 100%;
+        height:671px;
+    }
+    #figure1{
+        width: 175px;
+        height: 157px;
+        position: absolute;
+        left: -10px;
+        top:-10px;
+    }
+    #figure2{
+        width: 183px;
+        height: 215px;
+        position: absolute;
+        top: -24px;
+        right: 0px;
+    }
+    section{
+        width: 100%;
+        height:670px;
+    }
+    #logo{
+        width: 128px;
+        height: 40px;
+        padding-top: 80px;
+    }
+    .main-text{
+        width: 100%;
+        height: 138px;
+        margin-top: 66px;
+    }
+    .main-text h1{
+        width: 100%;
+        height: 74px;
+        font-size: 36px;
+        margin-bottom: 16px;
+    }
+    .main-text p{
+        width: 286px;
+        height: 48px;
+        font-size: 16px;
+    }
+    .timer{
+        margin-top: 40px;
+    }
+    .timer_items{
+        width: 95%;
+        height: 36px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+    .timer_item{
+        width: 78px;
+        height: 82px;
+        text-align: center;
+        margin-left: 18px;
+        font-size: 36px;
+    }
+    .timer_item:not(:last-child)::after{
+        margin-left: 20px;
+    }
+    .timer_item:not(:last-child,:first-child)::after {
+        margin-left: 13px;
+    }
+    .labels{
+        width: 90%;
+        margin-right: auto;
+        margin-left: auto;
+    }
+    .label{
+        width: 78px;
+        height: 40px;
+        margin-top: 6px;
+        margin-left: 15px;
+    } 
+    .label span{
+        display: inline-block;
+        font-size: 12px;
+        padding-top: 13px;
+        width: 65px;
+    }
+
+    .go_to_event{
+        height: 99px;
+        margin-top: 40px;
+        font-size: 16px;
+    }
+    
+    #event_button{
+        padding: 16px 20px 17px 28px;
+        margin-top: 15px;
+        font-size: 18px;
+    }
+    #event_button-icon{
+        width: 20px;
+        height: 20px;
+        margin-left: 30px;
+    }
+    footer{
+        width: 100%;
+        height: 141px;
+    }
+    #email-form{
+        width: 100%;
+        padding-top: 50px;
+    }
+    #femail{
+        width: 280px;
+        height: 41px;
+        left: 30px;
+        top: 721px;
+        padding-left: 20px;
+        font-size: 14px;
+        box-sizing: content-box;
+    }
+
+    #email-form button{
+        width: 33px;
+        height: 33px;
+        padding-top: 4px;
+        margin-top: 6px;
+        margin-left: 245px;
+    }
+}
+
+@media only screen and (min-width: 768px) and (orientation: portrait){
+    body{
+        width: 100%;
+        font-size: 16px;
+        font-weight: 400;
+    }
+    .background{
+        width: 100%;
+        height:861px;
+        display:flex;
+        justify-content: space-between;
+        position: absolute;
+    }
+    #figure1{
+        width: 259px;
+        height: 231px;
+    }
+    #figure2{
+        width: 271px;
+        height: 327px;
+        top: -10px;
+    }
+    section{
+        width: 100%;
+        height:861px;
+        position: relative;
+    }
+    #logo{
+        width: 190px;
+        height: 60px;
+        padding-top: 100px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+    }
+    .main-text{
+        width: 419px;
+        height: 105px;
+        text-align: center;
+        margin-top: 166px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .main-text h1{
+        width: 419px;
+        height: 37px;
+        font-size: 36px;
+        font-weight: bold;
+        margin-bottom: 20px;
+    }
+    .main-text p{
+        width: 286px;
+        height: 48px;
+        margin-left: 66px;
+    }
+    .timer{
+        margin-top: 40px;
+    }
+    .timer_items{
+        height: 82px;
+    }
+    .timer_item{
+        width: 64px;
+        height: 82px;
+        text-align: center;
+        margin-left: 34px;
+        font-size: 36px;
+    }
+    .label{
+        width: 64px;
+        height: 40px;
+        margin-top: 6px;
+    } 
+    .label span{
+        display: inline-block;
+        font-size: 12px;
+        padding-top: 13px;
+        width: 64px;
+    }
+
+    .go_to_event{
+        height: 99px;
+        margin-top: 40px;
+    }
+    #event_button{
+        padding: 16px 24px 17px;
+        margin-top: 15px;
+        position: absolute;
+        left: 264px;
+    }
+    #event_button-icon{
+        width: 20px;
+        height: 20px;
+        margin-left: 32px;
+    }
+    footer{
+        width: 100%;
+        height: 160px;
+    }
+    #email-form{
+        width: 100%;
+        padding-top: 0px;
+    }
+    #femail{
+        width: 360px;
+        height: 41px;
+        padding-left: 20px;
+        font-size: 14px;
+    }
+    
+    #email-form button{
+        width: 33px;
+        height: 33px;
+        padding-top: 4px;
+    }
+}
+@media only screen and (min-width:1440px) and (orientation: portrait){
+    body{
+        width: 1920px;
+        overflow-x: hidden;
+        margin:0;
+        font-family: 'Poppins';
+        font-size: 18px;
+        font-weight: 400;
+    }
+    .background{
+        width:1920px;
+        height:758px;
+        display:flex;
+        justify-content: space-between;
+        position: absolute;
+    }
+    #figure1{
+        width: 470px;
+        height: 419px;
+    }
+    #figure2{
+        width: 271px;
+        height: 327px;    
+    }
+    section{
+        width: 1920px;
+        height:758px;
+        position: relative;
+    }
+    #logo{
+        width: 190px;
+        height: 60px;
+        padding-top: 60px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+    }
+    .main-text{
+        width: 838px;
+        height: 137px;
+        text-align: center;
+        margin-top: 93px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .main-text h1{
+        width: 838px;
+        height: 75px;
+        font-size: 72px;
+        font-weight: bold;
+        text-transform: uppercase;
+        line-height: 104%;
+        color: rgba(22, 44, 78, 0.39);
+        margin-bottom: 8px;
+    }
+    .main-text p{
+        line-height: 150%;
+        width: 423px;
+        height: 54px;
+        margin-left: 207px;
+    }
+    .timer{
+        margin-top: 32px;
+    }
+    .timer_items{
+        height: 129px;
+        display: flex;
+        justify-content: center;
+    }
+    .timer_item{
+        width: 132px;
+        height: 129px;
+        text-align: center;
+        margin-left: 20px;
+        font-weight: 600;
+        font-size: 72px;
+        line-height: 100%;
+        color: #162C4E;
+    }
+    .label{
+        width: 132px;
+        height: 54px;
+        margin-top: 3px;
+    } 
+    .label span{
+        width: 132px;
+        text-align: center;
+        position: absolute;
+        z-index: 1;
+        font-size: 16px;
+        line-height: 100%;
+        padding-top: 25px;
+        font-weight: 400;
+        color: #FFFFFF;
+    
+    }
+    .label img{
+        position: relative;
+        z-index: 0;
+    }
+    
+    
+    .go_to_event{
+        text-align: center;
+        height: 99px;
+        margin-top: 72px;
+    }
+    #event_button{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 192px;
+        height: 27px;
+        background-color: #1D4169;
+        color: #FFFFFF;
+        border-radius: 40px;
+        padding: 16px 20px 17px 28px;
+        margin-top: 12px;
+        position: absolute;
+        left: 840px;
+    }
+    #event_button-icon{
+        width: 20px;
+        height: 20px;
+        margin-left: 30px;
+    }
+    footer{
+        width: 1920px;
+        height: 192px;
+        background-color: rgba(22, 44, 78, 1);
+        
+    }
+    #email-form{
+        padding-top: 61px;
+        display: flex;
+    }
+    #femail{
+        width: 440px;
+        height: 59px;
+        left: 740px;
+        top: 819px;
+        position: absolute;
+        z-index: 0;
+        background: #FFFFFF;
+        border: 1px solid rgba(0, 0, 0, 0.8);
+        box-sizing: border-box;
+        box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.4);
+        border-radius: 40px;
+        padding-left: 27px;
+        color: rgba(0, 0, 0, 0.6);
+        font-family: 'Poppins';
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 150%;
+    }
+    
+    #email-form button{
+        width: 43px;
+        height: 43px;
+        background: #DF2224;
+        border: .5px solid #DF2224;
+        border-radius: 60%;
+        padding-top: 4px;
+        z-index: 1;
+        position: relative;
+        left: 1129px;
+        top: 8px;
+    }
+}
