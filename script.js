@@ -5,7 +5,7 @@ if(window.innerWidth <= 768 || window.innerWidth < 1024){
           $("#hours").text("HH");
           $("#minutes").text("MM");
           $("#seconds").text("SS");
-          $(".label .back").attr("src","../test task/src/img/red_back2.svg");
+          $(".label .back").attr("src","../src/img/red_back2.svg");
         });
 }     
 else if(window.innerWidth >= 1024){
@@ -14,7 +14,7 @@ else if(window.innerWidth >= 1024){
         $("#hours").text("Hours");
         $("#minutes").text("Minutes");
         $("#seconds").text("Seconds");
-        $(".label .back").attr("src","../test task/src/img/red_back.svg");
+        $(".label .back").attr("src","../src/img/red_back.svg");
       });
 }
 }, true); 
@@ -25,7 +25,7 @@ window.addEventListener('DOMContentLoaded', function(event) {
               $("#hours").text("HH");
               $("#minutes").text("MM");
               $("#seconds").text("SS");
-              $(".label .back").attr("src","../test task/src/img/red_back2.svg");
+              $(".label .back").attr("src","../src/img/red_back2.svg");
             });
     }     
     else if(window.innerWidth >= 1024){
@@ -34,7 +34,7 @@ window.addEventListener('DOMContentLoaded', function(event) {
             $("#hours").text("Hours");
             $("#minutes").text("Minutes");
             $("#seconds").text("Seconds");
-            $(".label .back").attr("src","../test task/src/img/red_back.svg");
+            $(".label .back").attr("src","../src/img/red_back.svg");
           });
     }
     }, true); 
