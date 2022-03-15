@@ -48,7 +48,7 @@ function reply_click(clicked_id)
 {
         let email = document.getElementById("femail").value;
         if(validateEmail(email) == true){
-            scrollHiddenByModal();
+            //scrollHiddenByModal();
         }
         else{
             console.log("Error!");      
