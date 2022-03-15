@@ -1,31 +1,11 @@
-window.addEventListener('resize', function(event) {
-if(window.innerWidth <= 768 || window.innerWidth < 1024){
-    $(document).ready(function(){
-          $("#days").text("DD");
-          $("#hours").text("HH");
-          $("#minutes").text("MM");
-          $("#seconds").text("SS");
-          $(".label .back").attr("src","../src/img/red_back2.svg");
-        });
-}     
-else if(window.innerWidth >= 1024){
-    $(document).ready(function(){
-        $("#days").text("Days");
-        $("#hours").text("Hours");
-        $("#minutes").text("Minutes");
-        $("#seconds").text("Seconds");
-        $(".label .back").attr("src","../src/img/red_back.svg");
-      });
-}
-}, true); 
-window.addEventListener('DOMContentLoaded', function(event) {
+function changeBackground(){
     if(window.innerWidth <= 768 || window.innerWidth < 1024){
         $(document).ready(function(){
               $("#days").text("DD");
               $("#hours").text("HH");
               $("#minutes").text("MM");
               $("#seconds").text("SS");
-              $(".label .back").attr("src","../src/img/red_back2.svg");
+              $(".label .back").attr("src","./src/img/red_back2.svg");
             });
     }     
     else if(window.innerWidth >= 1024){
@@ -34,10 +14,16 @@ window.addEventListener('DOMContentLoaded', function(event) {
             $("#hours").text("Hours");
             $("#minutes").text("Minutes");
             $("#seconds").text("Seconds");
-            $(".label .back").attr("src","../src/img/red_back.svg");
+            $(".label .back").attr("src","./src/img/red_back.svg");
           });
     }
-    }, true); 
+}
+window.addEventListener('resize', function(event) {
+        changeBackground();
+}, true); 
+window.addEventListener('DOMContentLoaded', function(event) {
+        changeBackground();
+}, true); 
 
 let expireDate = new Date("Dec 31, 2022 12:00:00").getTime();
 document.addEventListener('DOMContentLoaded', function() {
